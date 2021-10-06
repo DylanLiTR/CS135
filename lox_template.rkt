@@ -1,0 +1,19 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname lox_template) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor mixed-fraction #f #t none #f () #t)))
+;; A (listof X) is one of:
+;; * empty
+;; * (cons X (listof X))
+
+;; (listof-X-template lox) PURPOSE
+;; Examples:
+(check-expect (listof-X-template empty) ANSWER)
+(check-expect (listof-X-template (cons X empty)) ANSWER)
+
+;; listof-X-template: (listof X) -> Any
+(define (listof-X-template lox)
+  (cond [(empty? lox) ...]
+        [(cons? lox) (... (first lox)
+                          (listof-X-template (rest lox)))]))
+
+;; Tests
