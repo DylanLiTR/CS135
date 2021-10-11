@@ -5,6 +5,11 @@
 ;; * empty
 ;; * (cons X (listof X))
 
+;; What does the function produce in the base case?
+;; What does the function do with the first element in a non-empty list?
+;; How does the function combine the value produced from the first element with the value obtained by
+;;    applying the function to the rest of the list?
+
 ;; (listof-X-template lox) PURPOSE
 ;; Examples:
 (check-expect (listof-X-template empty) ANSWER)

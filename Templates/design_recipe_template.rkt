@@ -1,6 +1,6 @@
 ;; The first three lines of this file were inserted by DrRacket. They record metadata
 ;; about the language level of this file in a form that our tools can easily process.
-#reader(lib "htdp-beginner-reader.ss" "lang")((modname |Design Recipe Template|) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor mixed-fraction #f #t none #f () #t)))
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname design_recipe_template) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor mixed-fraction #f #t none #f () #t)))
 ;;                                      Design Recipe Template
 ;; ---------------------------------------------------------------------------------------------------
 
@@ -17,7 +17,8 @@
 ;; Contract
 ;;     Function name:
 ;;     Types of inputs -> type of output
-;;         Any, Str, Char, Sym, Num, Int, Nat, Bool, (listof X), (ne-listof X)
+;;         Any, Str, Char, Sym, Num, Int, Nat, Bool, (listof X), (ne-listof X),
+;;         AL / (listof (list Nat Str)), (anyof ...)
 ;;     Requires:
 ;;         Name of the variable and condition to be met
 ;;             > < = <= >=
@@ -39,15 +40,15 @@
 
 ;; ---------------------------------------------------------------------------------------------------
 
-;; (function var1 var2) produces ...
+;; (FUNCTION var1 var2) produces ...
 
 ;; Examples:
-(check-expect (function input1 input2) output)
+(check-expect (FUNCTION input1 input2) output)
 
-;; function: Any Any -> Any
+;; FUNCTION: Any Any -> Any
 ;;     Requires: ...
-(define (function var1 var2)
+(define (FUNCTION var1 var2)
   )
 
 ;; Tests:
-(check-expect (function input1 input2) output)
+(check-expect (FUNCTION input1 input2) output)
